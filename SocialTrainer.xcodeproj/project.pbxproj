@@ -20,6 +20,8 @@
 		50A202141A17A92900461D61 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A2020A1A17A88C00461D61 /* MobileCoreServices.framework */; };
 		50A202161A17A93000461D61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A202151A17A93000461D61 /* QuartzCore.framework */; };
 		50A202191A17B00700461D61 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A202181A17B00700461D61 /* RecordViewController.m */; };
+		50A2021C1A17E48D00461D61 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A2021B1A17E48D00461D61 /* ArticleViewController.m */; };
+		50A2021F1A17EB3000461D61 /* RecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A2021E1A17EB3000461D61 /* RecordViewCell.m */; };
 		50C50EDA1A1758F3003EDE77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50ED91A1758F3003EDE77 /* main.m */; };
 		50C50EDD1A1758F3003EDE77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50EDC1A1758F3003EDE77 /* AppDelegate.m */; };
 		50C50EE31A1758F3003EDE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C50EE11A1758F3003EDE77 /* Main.storyboard */; };
@@ -75,6 +77,10 @@
 		50A202151A17A93000461D61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		50A202171A17B00700461D61 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		50A202181A17B00700461D61 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		50A2021A1A17E48D00461D61 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		50A2021B1A17E48D00461D61 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		50A2021D1A17EB3000461D61 /* RecordViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewCell.h; sourceTree = "<group>"; };
+		50A2021E1A17EB3000461D61 /* RecordViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewCell.m; sourceTree = "<group>"; };
 		50C50ED41A1758F3003EDE77 /* SocialTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C50ED81A1758F3003EDE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C50ED91A1758F3003EDE77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 				5093CB8F1A178EB800DA6A5C /* MHCellProtocol.h */,
 				5093CB901A178F0C00DA6A5C /* MHCell.h */,
 				5093CB911A178F0C00DA6A5C /* MHCell.m */,
+				50A2021D1A17EB3000461D61 /* RecordViewCell.h */,
+				50A2021E1A17EB3000461D61 /* RecordViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +322,8 @@
 				50A202181A17B00700461D61 /* RecordViewController.m */,
 				91B7633F1A17E57100DAD4A2 /* LoginViewController.h */,
 				91B763401A17E57100DAD4A2 /* LoginViewController.m */,
+				50A2021A1A17E48D00461D61 /* ArticleViewController.h */,
+				50A2021B1A17E48D00461D61 /* ArticleViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -478,12 +488,14 @@
 				91AFFE261A177EB300EA8839 /* PCTransitionFromFirstToSecond.m in Sources */,
 				50A202191A17B00700461D61 /* RecordViewController.m in Sources */,
 				91AEA3DC1A17C08600D01900 /* Server.m in Sources */,
+				50A2021C1A17E48D00461D61 /* ArticleViewController.m in Sources */,
 				5093CB881A178A6000DA6A5C /* NewsVideoCell.m in Sources */,
 				91AFFE2A1A178CB000EA8839 /* NewsDetailsViewController.m in Sources */,
 				91AFFE221A177C3A00EA8839 /* FeedCell.m in Sources */,
 				91B763411A17E57100DAD4A2 /* LoginViewController.m in Sources */,
 				91AFFE1E1A177BBA00EA8839 /* FeedViewController.m in Sources */,
 				50C50EDA1A1758F3003EDE77 /* main.m in Sources */,
+				50A2021F1A17EB3000461D61 /* RecordViewCell.m in Sources */,
 				91AEA3D61A17BF8300D01900 /* NewsModel.m in Sources */,
 				91AEA3D91A17BF9200D01900 /* ArticleModel.m in Sources */,
 				5093CB921A178F0C00DA6A5C /* MHCell.m in Sources */,

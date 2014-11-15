@@ -10,8 +10,10 @@
 #import "NewsFeedCell.h"
 #import "NewsHeaderCell.h"
 #import "NewsTitleCell.h"
-#import "NewsVideoCell.h"
+#import "RecordViewCell.h"
 #import "FeedCell.h"
+#import "ArticleViewController.h"
+#import "ArticleModel.h"
 
 
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -24,12 +26,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.news.name;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     cellsData = @[
                 @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
                  @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
                  @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
-                 @{@"cellIdentifier":[NewsVideoCell cellIdentifier], @"height": @([NewsVideoCell cellHeight])}
+                 @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
                  ];
     
     // Do any additional setup after loading the view.
@@ -60,6 +63,26 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.cellsData.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 1)
+    {
+        [self performSegueWithIdentifier:@"showArticle" sender:nil];
+    }
+    
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showArticle"])
+    {
+        ArticleViewController *articleViewController = segue.destinationViewController;
+        [articleViewController setUrl:self.news.article.url];
+    }
 }
 
 @end

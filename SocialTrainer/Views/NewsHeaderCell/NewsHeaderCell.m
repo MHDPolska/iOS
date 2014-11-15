@@ -7,6 +7,9 @@
 //
 
 #import "NewsHeaderCell.h"
+#import "NewsModel.h"
+#import "ArticleModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 
@@ -22,9 +25,21 @@
     // Configure the view for the selected state
 }
 
+- (void)loadData:(id)data
+{
+    NewsModel *newsModel = (NewsModel *)data;
+    self.titleLabel.text = newsModel.article.title;
+    self.headerLabel.text = newsModel.article.summary;
+    
+    [self.backgroundImage setImageWithURL:[NSURL URLWithString:newsModel.article.pictureUrls.firstObject]
+                   placeholderImage:[UIImage imageNamed:@"download.jpeg"]
+                            options:SDWebImageRefreshCached];
+
+}
+
 + (CGFloat)cellHeight
 {
-    return 125.f;
+    return 215.f;
 }
 
 @end
