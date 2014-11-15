@@ -423,6 +423,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Js-4H-EV6">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -466,6 +469,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYy-KM-ePw">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+                                                    </variation>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiC-9W-bVR">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -474,6 +480,9 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </view>
                                                     <blurEffect style="dark"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+                                                    </variation>
                                                 </visualEffectView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifa weitet Ermittlungen gegen Beckenbauer aus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-Rn-EJU">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -488,7 +497,8 @@
                                                             <exclude reference="NhG-Jm-K4n"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="15" y="8" width="243" height="43"/>
                                                         <mask key="constraints">
                                                             <include reference="NhG-Jm-K4n"/>
                                                         </mask>
@@ -508,7 +518,8 @@
                                                             <exclude reference="RW2-bB-ww7"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="10" y="70" width="280" height="87"/>
                                                         <mask key="constraints">
                                                             <include reference="RW2-bB-ww7"/>
                                                         </mask>
@@ -519,6 +530,9 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="15" y="186" width="97" height="21"/>
+                                                    </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-1M-z2o">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -527,6 +541,9 @@
                                                         <color key="titleColor" red="0.44705882349999998" green="0.87843137250000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="188" y="163" width="110" height="21"/>
+                                                    </variation>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -783,42 +800,11 @@
                     <connections>
                         <outlet property="tableView" destination="T4K-Ej-UfE" id="XVG-vf-ddj"/>
                         <segue destination="pbj-xY-1Ku" kind="show" identifier="showArticle" id="A3s-Tm-pMg"/>
-                        <segue destination="pth-tc-ixT" kind="presentation" identifier="showRecord" id="6mY-QL-GCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvF-v4-2VY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1279.5" y="399"/>
-        </scene>
-        <!--Record View Controller-->
-        <scene sceneID="XYa-jx-mUO">
-            <objects>
-                <viewController storyboardIdentifier="RecordViewController" id="pth-tc-ixT" customClass="RecordViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XJf-h6-8wS"/>
-                        <viewControllerLayoutGuide type="bottom" id="al4-sN-sA2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WDe-8i-Uab">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7C-Nd-nJ9">
-                                <rect key="frame" x="122" y="468" width="76" height="30"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Capture">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="captureVideo:" destination="pth-tc-ixT" eventType="touchUpInside" id="H1c-eU-EMf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4N8-34-Jc9" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2199" y="-264"/>
         </scene>
     </scenes>
     <resources>

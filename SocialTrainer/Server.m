@@ -8,6 +8,8 @@
 
 #import "Server.h"
 #import "NewsModel.h"
+#import "SocialModel.h"
+
 @interface Server ()
 @property (nonatomic, strong) NSURL *baseURL;
 @property (nonatomic, strong) AFNetworkReachabilityManager* reachabilityManager;
@@ -33,6 +35,11 @@
     return @"/topics";
 }
 
++ (NSString *)getSocialNewsEndPoint:(NSString *)topicId
+{
+    return [NSString stringWithFormat:@"/topics/%@/social", topicId];
+}
+
 
 - (void)getTopics:(void(^)(NSArray*))succes failureHandler:(void(^)(NSError*))failure
 {
@@ -45,6 +52,19 @@
                 succes(result);
             });
             
+        });
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(error);
+    }];
+}
+
+- (void)getSocialNews:(void (^)(NSArray *))success forTopicId:(NSString *)topicId failureHandler:(void (^)(NSError *))failure
+{
+    [self.manager GET:[Server getSocialNewsEndPoint:topicId] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *result = [SocialModel arrayOfModelsFromDictionaries:responseObject];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            success(result);
         });
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
