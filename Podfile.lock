@@ -23,6 +23,9 @@ PODS:
   - ISO8601DateFormatter (0.7)
   - JSONModel (1.0.1)
   - PBJVideoPlayer (0.1.11)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.7.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -30,6 +33,7 @@ DEPENDENCIES:
   - JSONModel
   - JSONModel (from `git@github.com:pilotcreative/JSONModel.git`)
   - PBJVideoPlayer
+  - SDWebImage
 
 EXTERNAL SOURCES:
   JSONModel:
@@ -40,5 +44,6 @@ SPEC CHECKSUMS:
   ISO8601DateFormatter: 59731cd880cf87e71b4fa95f0d6b713dcbc4cbce
   JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
   PBJVideoPlayer: 0891ebdda666f59fd372e8c3fa42a6cdffbe9d54
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
 
 COCOAPODS: 0.34.4

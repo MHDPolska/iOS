@@ -9,12 +9,16 @@
 #import "FeedViewController.h"
 #import "FeedCell.h"
 #import "PCTransitionFromFirstToSecond.h"
+#import "Server.h"
+#import "NewsDetailsViewController.h"
 
 
 @interface FeedViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate >
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic,strong) NSIndexPath *selectedCellIndexPath;
+
+@property (nonatomic,strong) NSArray *newsFeed;
 
 @end
 
@@ -24,7 +28,12 @@
 
     [super viewDidAppear:animated];
     self.navigationController.delegate = self;
-    
+    [[Server sharedInstance]getTopics:^(NSArray *news) {
+        self.newsFeed = news;
+        [self.tableView reloadData];
+    } failureHandler:^(NSError *e) {
+        NSLog(@"%@",e);
+    }];
 }
 
 
@@ -47,14 +56,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FeedCell *cell = (FeedCell*) [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
-    [cell loadData:nil];
+    [cell loadData:self.newsFeed[indexPath.row]];
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.newsFeed.count;
 }
 
 #pragma mark - UITableViewDelegate
@@ -63,6 +72,7 @@
 {
     self.selectedCellIndexPath = indexPath;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"showDetails" sender:self.newsFeed[indexPath.row]];
 }
 
 
@@ -75,6 +85,12 @@
                                                  toViewController:(UIViewController *)toVC {
 
     return [[PCTransitionFromFirstToSecond alloc]init];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NewsDetailsViewController *destiantion = (NewsDetailsViewController *)segue.destinationViewController;
+    destiantion.news = (NewsModel*)sender;
 }
 
 @end
