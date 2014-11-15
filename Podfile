@@ -4,6 +4,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'SocialTrainer' do
+	pod 'PBJVideoPlayer'
 	pod 'SDWebImage'
 	pod 'ISO8601DateFormatter'
 	pod 'JSONModel'

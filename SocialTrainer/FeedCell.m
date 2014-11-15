@@ -31,7 +31,8 @@
     self.title.text = newsModel.article.title;
     self.info.text = newsModel.article.summary;
     [self.thumbnail setImageWithURL:[NSURL URLWithString:newsModel.article.pictureUrls.firstObject]
-                   placeholderImage:[UIImage imageNamed:@"download.jpeg"]
+                   placeholderImage:[UIImage imageNamed:@"placeholder"
+                                     ]
                             options:SDWebImageRefreshCached];
 }
 

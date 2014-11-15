@@ -17,11 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[Server sharedInstance]getTopics:^(NSArray *a) {
-        NSLog(@"%@",a);
-    } failureHandler:^(NSError *e) {
-        NSLog(@"%@",e);
-    }];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 
