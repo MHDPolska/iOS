@@ -115,7 +115,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="260" y="37" width="140" height="21"/>
+                                                        <rect key="frame" x="260" y="37" width="122" height="21"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thousands Rally For Democracy In China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-D1-Bly">
@@ -360,7 +360,7 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
                                 </variation>
                             </textView>
                         </subviews>
@@ -379,7 +379,7 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-aw-ayV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149.5" y="399"/>
+            <point key="canvasLocation" x="2199" y="399"/>
         </scene>
     </scenes>
     <resources>
