@@ -28,6 +28,9 @@
 		50C50EF41A1758F3003EDE77 /* SocialTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50EF31A1758F3003EDE77 /* SocialTrainerTests.m */; };
 		72A25DD8F5627A7540F8E6E2 /* libPods-SocialTrainer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ED5EF15B70AB610917DB8E /* libPods-SocialTrainer.a */; };
 		910C66941A17AD0D00805AD4 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 910C66931A17AD0D00805AD4 /* download.jpeg */; };
+		91AEA3D61A17BF8300D01900 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AEA3D51A17BF8300D01900 /* NewsModel.m */; };
+		91AEA3D91A17BF9200D01900 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AEA3D81A17BF9200D01900 /* ArticleModel.m */; };
+		91AEA3DC1A17C08600D01900 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AEA3DB1A17C08600D01900 /* Server.m */; };
 		91AFFE1E1A177BBA00EA8839 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFFE1D1A177BBA00EA8839 /* FeedViewController.m */; };
 		91AFFE221A177C3A00EA8839 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFFE211A177C3A00EA8839 /* FeedCell.m */; };
 		91AFFE261A177EB300EA8839 /* PCTransitionFromFirstToSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFFE251A177EB300EA8839 /* PCTransitionFromFirstToSecond.m */; };
@@ -79,6 +82,12 @@
 		50C50EF21A1758F3003EDE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C50EF31A1758F3003EDE77 /* SocialTrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialTrainerTests.m; sourceTree = "<group>"; };
 		910C66931A17AD0D00805AD4 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
+		91AEA3D41A17BF8300D01900 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		91AEA3D51A17BF8300D01900 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		91AEA3D71A17BF9200D01900 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		91AEA3D81A17BF9200D01900 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
+		91AEA3DA1A17C08600D01900 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		91AEA3DB1A17C08600D01900 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
 		91AFFE1C1A177BBA00EA8839 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = ../FeedViewController.h; sourceTree = "<group>"; };
 		91AFFE1D1A177BBA00EA8839 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = ../FeedViewController.m; sourceTree = "<group>"; };
 		91AFFE201A177C3A00EA8839 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
@@ -197,6 +206,7 @@
 		50C50ED61A1758F3003EDE77 /* SocialTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				91AEA3D21A17BF3000D01900 /* Server */,
 				910C66931A17AD0D00805AD4 /* download.jpeg */,
 				91AFFE271A178CB000EA8839 /* ViewControllers */,
 				5093CB891A178A8D00DA6A5C /* NewsDetails.storyboard */,
@@ -237,6 +247,27 @@
 				50C50EF21A1758F3003EDE77 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91AEA3D21A17BF3000D01900 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				91AEA3D31A17BF4500D01900 /* API Communication objects */,
+				91AEA3DA1A17C08600D01900 /* Server.h */,
+				91AEA3DB1A17C08600D01900 /* Server.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		91AEA3D31A17BF4500D01900 /* API Communication objects */ = {
+			isa = PBXGroup;
+			children = (
+				91AEA3D41A17BF8300D01900 /* NewsModel.h */,
+				91AEA3D51A17BF8300D01900 /* NewsModel.m */,
+				91AEA3D71A17BF9200D01900 /* ArticleModel.h */,
+				91AEA3D81A17BF9200D01900 /* ArticleModel.m */,
+			);
+			name = "API Communication objects";
 			sourceTree = "<group>";
 		};
 		91AFFE1F1A177C2600EA8839 /* Cells */ = {
@@ -425,11 +456,14 @@
 				5093CB851A178A6000DA6A5C /* NewsHeaderCell.m in Sources */,
 				91AFFE261A177EB300EA8839 /* PCTransitionFromFirstToSecond.m in Sources */,
 				50A202191A17B00700461D61 /* RecordViewController.m in Sources */,
+				91AEA3DC1A17C08600D01900 /* Server.m in Sources */,
 				5093CB881A178A6000DA6A5C /* NewsVideoCell.m in Sources */,
 				91AFFE2A1A178CB000EA8839 /* NewsDetailsViewController.m in Sources */,
 				91AFFE221A177C3A00EA8839 /* FeedCell.m in Sources */,
 				91AFFE1E1A177BBA00EA8839 /* FeedViewController.m in Sources */,
 				50C50EDA1A1758F3003EDE77 /* main.m in Sources */,
+				91AEA3D61A17BF8300D01900 /* NewsModel.m in Sources */,
+				91AEA3D91A17BF9200D01900 /* ArticleModel.m in Sources */,
 				5093CB921A178F0C00DA6A5C /* MHCell.m in Sources */,
 				5093CB8E1A178AC300DA6A5C /* NewsFeedCell.m in Sources */,
 				5093CB871A178A6000DA6A5C /* NewsTitleCell.m in Sources */,

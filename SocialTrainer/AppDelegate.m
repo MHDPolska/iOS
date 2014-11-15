@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Server.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[Server sharedInstance]getTopics:^(NSArray *a) {
+        NSLog(@"%@",a);
+    } failureHandler:^(NSError *e) {
+        NSLog(@"%@",e);
+    }];
     return YES;
 }
 
