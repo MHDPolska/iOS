@@ -115,7 +115,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="260" y="37" width="140" height="21"/>
+                                                        <rect key="frame" x="260" y="37" width="122" height="21"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thousands Rally For Democracy In China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-D1-Bly">
@@ -318,7 +318,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Honk Kong" id="CPB-9H-eLe"/>
+                    <navigationItem key="navigationItem" title="Honk Kong" id="CPB-9H-eLe">
+                        <barButtonItem key="rightBarButtonItem" title="Record" id="kRE-ll-Umv">
+                            <connections>
+                                <action selector="recordVideo:" destination="DZO-FB-3Oi" id="a9j-6g-6pa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wmy-YS-QXx" id="gka-lN-D9Y"/>
                     </connections>
@@ -379,7 +385,7 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-aw-ayV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149.5" y="399"/>
+            <point key="canvasLocation" x="2199" y="399"/>
         </scene>
     </scenes>
     <resources>

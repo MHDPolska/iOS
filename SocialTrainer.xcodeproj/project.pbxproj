@@ -13,6 +13,13 @@
 		5093CB8B1A178A8D00DA6A5C /* NewsDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5093CB891A178A8D00DA6A5C /* NewsDetails.storyboard */; };
 		5093CB8E1A178AC300DA6A5C /* NewsFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5093CB8D1A178AC300DA6A5C /* NewsFeedCell.m */; };
 		5093CB921A178F0C00DA6A5C /* MHCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5093CB911A178F0C00DA6A5C /* MHCell.m */; };
+		50A2020D1A17A90A00461D61 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A2020C1A17A90A00461D61 /* AssetsLibrary.framework */; };
+		50A2020F1A17A91100461D61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A2020E1A17A91100461D61 /* AVFoundation.framework */; };
+		50A202111A17A91800461D61 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A202101A17A91800461D61 /* CoreMedia.framework */; };
+		50A202131A17A92100461D61 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A202121A17A92100461D61 /* MediaPlayer.framework */; };
+		50A202141A17A92900461D61 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A2020A1A17A88C00461D61 /* MobileCoreServices.framework */; };
+		50A202161A17A93000461D61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A202151A17A93000461D61 /* QuartzCore.framework */; };
+		50A202191A17B00700461D61 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A202181A17B00700461D61 /* RecordViewController.m */; };
 		50C50EDA1A1758F3003EDE77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50ED91A1758F3003EDE77 /* main.m */; };
 		50C50EDD1A1758F3003EDE77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50EDC1A1758F3003EDE77 /* AppDelegate.m */; };
 		50C50EE31A1758F3003EDE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C50EE11A1758F3003EDE77 /* Main.storyboard */; };
@@ -51,6 +58,14 @@
 		5093CB8F1A178EB800DA6A5C /* MHCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCellProtocol.h; sourceTree = "<group>"; };
 		5093CB901A178F0C00DA6A5C /* MHCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCell.h; sourceTree = "<group>"; };
 		5093CB911A178F0C00DA6A5C /* MHCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCell.m; sourceTree = "<group>"; };
+		50A2020A1A17A88C00461D61 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		50A2020C1A17A90A00461D61 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		50A2020E1A17A91100461D61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		50A202101A17A91800461D61 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		50A202121A17A92100461D61 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		50A202151A17A93000461D61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		50A202171A17B00700461D61 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		50A202181A17B00700461D61 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		50C50ED41A1758F3003EDE77 /* SocialTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C50ED81A1758F3003EDE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C50ED91A1758F3003EDE77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +93,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A202161A17A93000461D61 /* QuartzCore.framework in Frameworks */,
+				50A202141A17A92900461D61 /* MobileCoreServices.framework in Frameworks */,
+				50A202131A17A92100461D61 /* MediaPlayer.framework in Frameworks */,
+				50A202111A17A91800461D61 /* CoreMedia.framework in Frameworks */,
+				50A2020F1A17A91100461D61 /* AVFoundation.framework in Frameworks */,
+				50A2020D1A17A90A00461D61 /* AssetsLibrary.framework in Frameworks */,
 				72A25DD8F5627A7540F8E6E2 /* libPods-SocialTrainer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +261,8 @@
 				91AFFE1D1A177BBA00EA8839 /* FeedViewController.m */,
 				91AFFE281A178CB000EA8839 /* NewsDetailsViewController.h */,
 				91AFFE291A178CB000EA8839 /* NewsDetailsViewController.m */,
+				50A202171A17B00700461D61 /* RecordViewController.h */,
+				50A202181A17B00700461D61 /* RecordViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -247,6 +270,12 @@
 		E1D129531D0875303F20D2AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50A202151A17A93000461D61 /* QuartzCore.framework */,
+				50A202121A17A92100461D61 /* MediaPlayer.framework */,
+				50A202101A17A91800461D61 /* CoreMedia.framework */,
+				50A2020E1A17A91100461D61 /* AVFoundation.framework */,
+				50A2020C1A17A90A00461D61 /* AssetsLibrary.framework */,
+				50A2020A1A17A88C00461D61 /* MobileCoreServices.framework */,
 				F7ED5EF15B70AB610917DB8E /* libPods-SocialTrainer.a */,
 			);
 			name = Frameworks;
@@ -391,6 +420,7 @@
 				50C50EDD1A1758F3003EDE77 /* AppDelegate.m in Sources */,
 				5093CB851A178A6000DA6A5C /* NewsHeaderCell.m in Sources */,
 				91AFFE261A177EB300EA8839 /* PCTransitionFromFirstToSecond.m in Sources */,
+				50A202191A17B00700461D61 /* RecordViewController.m in Sources */,
 				5093CB881A178A6000DA6A5C /* NewsVideoCell.m in Sources */,
 				91AFFE2A1A178CB000EA8839 /* NewsDetailsViewController.m in Sources */,
 				91AFFE221A177C3A00EA8839 /* FeedCell.m in Sources */,

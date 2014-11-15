@@ -12,6 +12,7 @@
 #import "NewsTitleCell.h"
 #import "NewsVideoCell.h"
 
+
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *cellsData;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -57,6 +58,5 @@
 {
     return self.cellsData.count;
 }
-
 
 @end
