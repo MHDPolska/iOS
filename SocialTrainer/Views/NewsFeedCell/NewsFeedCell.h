@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MHCell.h"
 
+
 @interface NewsFeedCell : MHCell
+@property (nonatomic, weak) IBOutlet UIImageView *avatar;
+@property (nonatomic, weak) IBOutlet UILabel *text;
+@property (nonatomic, weak) IBOutlet UIView *ytView;
 
 @end

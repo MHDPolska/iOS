@@ -15,12 +15,15 @@
 #import "ArticleViewController.h"
 #import "ArticleModel.h"
 #import "Server.h"
+#import <XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h>
 
 
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *cellsData;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *socialNews;
+@property (nonatomic, strong) NSMutableArray *ytPlayers;
+@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 @end
 
 @implementation NewsDetailsViewController
@@ -45,7 +48,8 @@
 
     
     // Do any additional setup after loading the view.
-    
+    _videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"bru0iNWJ13Q"];
+
     NSString *topicId = [self.news.article valueForKey:@"id"];
     
     [[Server sharedInstance] getSocialNews:^(NSArray *socialNews) {
@@ -66,11 +70,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *cellData = self.cellsData[indexPath.row];
+    NSString *cellIdentifier = cellData[@"cellIdentifier"];
     
-    MHCell *cell = [tableView dequeueReusableCellWithIdentifier:cellData[@"cellIdentifier"]
+    MHCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier
                                                    forIndexPath:indexPath];
-    
-    [cell loadData:self.news];
+    if ([cellIdentifier isEqualToString:[NewsFeedCell cellIdentifier]])
+    {
+        NewsFeedCell *nfCell = (NewsFeedCell *)cell;
+        [self.videoPlayerViewController presentInView:nfCell.ytView];
+        [self.videoPlayerViewController.moviePlayer play];
+    }
+    else
+    {
+        [cell loadData:self.news];
+    }
     
     NSLog(@"indexPath: %@, frame: %@",indexPath,NSStringFromCGRect([self.view convertRect:cell.frame fromView:self.view]));
     return cell;

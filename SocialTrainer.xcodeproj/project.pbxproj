@@ -24,6 +24,7 @@
 		50A2021F1A17EB3000461D61 /* RecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A2021E1A17EB3000461D61 /* RecordViewCell.m */; };
 		50A202221A17F88700461D61 /* SocialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A202211A17F88700461D61 /* SocialModel.m */; };
 		50A202251A17F90F00461D61 /* SocialUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A202241A17F90F00461D61 /* SocialUserModel.m */; };
+		50A202281A1817B600461D61 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A202271A1817B600461D61 /* PlayerViewController.m */; };
 		50C50EDA1A1758F3003EDE77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50ED91A1758F3003EDE77 /* main.m */; };
 		50C50EDD1A1758F3003EDE77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50EDC1A1758F3003EDE77 /* AppDelegate.m */; };
 		50C50EE31A1758F3003EDE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50C50EE11A1758F3003EDE77 /* Main.storyboard */; };
@@ -87,6 +88,8 @@
 		50A202211A17F88700461D61 /* SocialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialModel.m; sourceTree = "<group>"; };
 		50A202231A17F90F00461D61 /* SocialUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialUserModel.h; sourceTree = "<group>"; };
 		50A202241A17F90F00461D61 /* SocialUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialUserModel.m; sourceTree = "<group>"; };
+		50A202261A1817B600461D61 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		50A202271A1817B600461D61 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		50C50ED41A1758F3003EDE77 /* SocialTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C50ED81A1758F3003EDE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C50ED91A1758F3003EDE77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				91B763401A17E57100DAD4A2 /* LoginViewController.m */,
 				50A2021A1A17E48D00461D61 /* ArticleViewController.h */,
 				50A2021B1A17E48D00461D61 /* ArticleViewController.m */,
+				50A202261A1817B600461D61 /* PlayerViewController.h */,
+				50A202271A1817B600461D61 /* PlayerViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				50A202251A17F90F00461D61 /* SocialUserModel.m in Sources */,
 				91AFFE1E1A177BBA00EA8839 /* FeedViewController.m in Sources */,
 				50C50EDA1A1758F3003EDE77 /* main.m in Sources */,
+				50A202281A1817B600461D61 /* PlayerViewController.m in Sources */,
 				50A2021F1A17EB3000461D61 /* RecordViewCell.m in Sources */,
 				91AEA3D61A17BF8300D01900 /* NewsModel.m in Sources */,
 				91AEA3D91A17BF9200D01900 /* ArticleModel.m in Sources */,

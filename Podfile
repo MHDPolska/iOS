@@ -11,6 +11,7 @@ target 'SocialTrainer' do
 	pod 'PBJVideoPlayer'
 	pod "AFNetworking", "~> 2.0"
 	pod 'JSONModel', :git => 'git@github.com:pilotcreative/JSONModel.git'
+	pod "XCDYouTubeKit", "~> 2.0.3"
 end
 
 target 'SocialTrainerTests' do
