@@ -14,7 +14,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.3;
+    return 0.6;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -26,24 +26,20 @@
     
     UIView *cellVideoView = [[feedViewController getSelectedCell] getVideoView];
     
-    
-    destinationViewController.view.frame = [transitionContext finalFrameForViewController:destinationViewController];
+    UIView *cellImageSnapshot = [cellVideoView snapshotViewAfterScreenUpdates:NO];
+    cellImageSnapshot.frame = [containerView convertRect:cellVideoView.frame fromView:cellVideoView.superview];
     destinationViewController.view.alpha = 0;
-//todo mark video view as invisible
-    
-    
-    [containerView addSubview:destinationViewController.view];
-    [containerView addSubview:cellVideoView];
 
+    [containerView addSubview:destinationViewController.view];
+    [containerView addSubview:cellImageSnapshot];
     
-    
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.6
+                     animations:^{
         destinationViewController.view.alpha = 1.0;
-        CGRect frame = CGRectMake(0, 0, 320, 400);
-        cellVideoView.frame = frame;
+        CGRect frame = CGRectMake(0, 64, 375, 200);
+        cellImageSnapshot.frame = frame;
     }completion:^(BOOL finished) {
-//todo mark video view as invisible
-        [cellVideoView removeFromSuperview];
+        [cellImageSnapshot removeFromSuperview];
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];
     

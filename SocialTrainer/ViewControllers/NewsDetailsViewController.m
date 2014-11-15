@@ -11,6 +11,7 @@
 #import "NewsHeaderCell.h"
 #import "NewsTitleCell.h"
 #import "NewsVideoCell.h"
+#import "FeedCell.h"
 
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *cellsData;
@@ -23,7 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
-    cellsData = @[@{@"cellIdentifier":[NewsTitleCell cellIdentifier], @"height": @([NewsTitleCell cellHeight])},
+    cellsData = @[
+                @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
+                 @{@"cellIdentifier":[NewsTitleCell cellIdentifier], @"height": @([NewsTitleCell cellHeight])},
                  @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
                  @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
                  @{@"cellIdentifier":[NewsVideoCell cellIdentifier], @"height": @([NewsVideoCell cellHeight])}
@@ -42,7 +45,8 @@
     NSDictionary *cellData = self.cellsData[indexPath.row];
     
     MHCell *cell = [tableView dequeueReusableCellWithIdentifier:cellData[@"cellIdentifier"]
-                                           forIndexPath:indexPath];
+                                                   forIndexPath:indexPath];
+    
     [cell loadData:nil];
     return cell;
 }
