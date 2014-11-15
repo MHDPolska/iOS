@@ -1,14 +1,13 @@
 //
-//  NewsVideoCell.h
+//  MHCell.h
 //  SocialTrainer
 //
 //  Created by Paweł Nużka on 15/11/14.
 //  Copyright (c) 2014 MediaHackDay. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MHCell.h"
+#import <Foundation/Foundation.h>
 
-@interface NewsVideoCell : MHCell
-
+@protocol MHCellProtocol <NSObject>
+- (void)loadData:(id)data;
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MHCell.h"
 
-@interface NewsFeedCell : UITableViewCell
+@interface NewsFeedCell : MHCell
 
 @end

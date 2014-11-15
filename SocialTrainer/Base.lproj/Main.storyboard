@@ -43,6 +43,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="DZO-FB-3Oi" kind="show" id="0at-D8-oIF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -78,7 +81,6 @@
                     <navigationItem key="navigationItem" id="p5k-0L-IMI"/>
                     <connections>
                         <outlet property="tableView" destination="EVd-Lv-Xyz" id="HsV-Bh-B9w"/>
-                        <segue destination="DZO-FB-3Oi" kind="show" id="c1D-i7-dtR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -97,11 +99,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-YS-QXx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="43" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-YS-QXx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="J3S-se-GR6" customClass="NewsTitleCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTitleCell" rowHeight="67" id="J3S-se-GR6" customClass="NewsTitleCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J3S-se-GR6" id="iMg-aK-k63">
@@ -140,7 +142,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="QeN-rZ-G2C" customClass="NewsHeaderCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsHeaderCell" rowHeight="125" id="QeN-rZ-G2C" customClass="NewsHeaderCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QeN-rZ-G2C" id="Do3-Mv-uJr">
@@ -172,13 +174,13 @@
                                             <segue destination="pbj-xY-1Ku" kind="show" id="of6-op-rWE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="191" id="aOE-kn-TvS" customClass="NewsFeedCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsFeedCell" rowHeight="191" id="aOE-kn-TvS" customClass="NewsFeedCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aOE-kn-TvS" id="pze-6o-wbW">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honk_kong" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-ae-21u">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honk_kong" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-ae-21u">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="0.0" y="0.0" width="400" height="191"/>
@@ -244,7 +246,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="185" id="Nw7-Tv-QCp" customClass="NewsVideoCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsVideoCell" rowHeight="185" id="Nw7-Tv-QCp" customClass="NewsVideoCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nw7-Tv-QCp" id="J3G-mF-xVy">
@@ -253,7 +255,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hk_yt" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ5-Mx-HrM">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="184.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="185"/>
                                                     </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_button" translatesAutoresizingMaskIntoConstraints="NO" id="pUC-ep-Gca">
@@ -278,9 +280,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="DZO-FB-3Oi" id="Jlc-g5-Trw"/>
                                     <outlet property="delegate" destination="DZO-FB-3Oi" id="eKo-Q8-Uj3"/>
@@ -288,18 +287,41 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wmy-YS-QXx" secondAttribute="trailing" id="G5O-B0-Dx8"/>
+                            <constraint firstItem="wmy-YS-QXx" firstAttribute="top" secondItem="JYV-ie-mp4" secondAttribute="top" id="JYl-OC-WdJ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="q8s-2m-NOz" firstAttribute="top" secondItem="wmy-YS-QXx" secondAttribute="bottom" id="kg7-QM-84f"/>
+                            <constraint firstItem="wmy-YS-QXx" firstAttribute="leading" secondItem="JYV-ie-mp4" secondAttribute="leading" id="sUY-GX-Fb7"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wmy-YS-QXx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="kg7-QM-84f"/>
+                                <exclude reference="G5O-B0-Dx8"/>
+                                <exclude reference="JYl-OC-WdJ"/>
+                                <exclude reference="sUY-GX-Fb7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="wmy-YS-QXx"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="kg7-QM-84f"/>
+                                <include reference="G5O-B0-Dx8"/>
+                                <include reference="JYl-OC-WdJ"/>
+                                <include reference="sUY-GX-Fb7"/>
+                            </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Honk Kong" id="CPB-9H-eLe"/>
+                    <connections>
+                        <outlet property="tableView" destination="wmy-YS-QXx" id="gka-lN-D9Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpE-lZ-yi9" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,7 +360,7 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                             </textView>
                         </subviews>

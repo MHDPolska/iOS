@@ -1,5 +1,5 @@
 //
-//  NewsVideoCell.h
+//  MHCell.h
 //  SocialTrainer
 //
 //  Created by Paweł Nużka on 15/11/14.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MHCell.h"
+#import "MHCellProtocol.h"
 
-@interface NewsVideoCell : MHCell
-
+@interface MHCell : UITableViewCell
++ (NSString *)cellIdentifier;
+- (void)loadData:(id)data;
++ (CGFloat)cellHeight;
 @end
