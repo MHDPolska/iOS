@@ -24,6 +24,12 @@
 @implementation NewsDetailsViewController
 @synthesize cellsData;
 
+- (UIView*)getMainThumbnailView
+{
+    [self.tableView reloadData];
+    return [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].contentView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.news.name;
@@ -34,13 +40,11 @@
                  @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
                  @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
                  ];
-    
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,6 +55,8 @@
                                                    forIndexPath:indexPath];
     
     [cell loadData:self.news];
+    
+    NSLog(@"indexPath: %@, frame: %@",indexPath,NSStringFromCGRect([self.view convertRect:cell.frame fromView:self.view]));
     return cell;
 }
 

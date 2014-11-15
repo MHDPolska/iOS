@@ -17,6 +17,6 @@
 @property (nonatomic,strong) NewsModel *news;
 @property (strong, nonatomic) NSURL *videoURL;
 @property (strong, nonatomic) MPMoviePlayerController *videoController;
-
+- (UIView*)getMainThumbnailView;
 
 @end

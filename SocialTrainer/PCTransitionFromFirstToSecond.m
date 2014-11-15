@@ -9,18 +9,19 @@
 #import "PCTransitionFromFirstToSecond.h"
 #import "FeedViewController.h"
 #import "FeedCell.h"
+#import "NewsDetailsViewController.h"
 
 @implementation PCTransitionFromFirstToSecond
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.6;
+    return 6;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     FeedViewController *feedViewController = (FeedViewController*)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *destinationViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    NewsDetailsViewController *destinationViewController = (NewsDetailsViewController*)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *containerView = [transitionContext containerView];
     
@@ -33,12 +34,18 @@
     [containerView addSubview:destinationViewController.view];
     [containerView addSubview:cellImageSnapshot];
     
-    [UIView animateWithDuration:0.6
+    UIView *destinationCellContentView = [destinationViewController getMainThumbnailView];
+    destinationCellContentView.hidden = YES;
+    
+    [UIView animateWithDuration:6
                      animations:^{
+                         
         destinationViewController.view.alpha = 1.0;
-        CGRect frame = CGRectMake(0, 64, 375, 200);
+//         CGRect frame = [containerView convertRect:destinationCellContentView.frame fromView:destinationViewController.view];
+             CGRect frame = CGRectMake(0, 0, 375, 200);
         cellImageSnapshot.frame = frame;
     }completion:^(BOOL finished) {
+        destinationCellContentView.hidden = NO;
         [cellImageSnapshot removeFromSuperview];
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];
