@@ -15,7 +15,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 6;
+    return .6;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -37,7 +37,7 @@
     UIView *destinationCellContentView = [destinationViewController getMainThumbnailView];
     destinationCellContentView.hidden = YES;
     
-    [UIView animateWithDuration:6
+    [UIView animateWithDuration:.6
                      animations:^{
                          
         destinationViewController.view.alpha = 1.0;
