@@ -14,11 +14,13 @@
 #import "FeedCell.h"
 #import "ArticleViewController.h"
 #import "ArticleModel.h"
+#import "Server.h"
 
 
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *cellsData;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *socialNews;
 @end
 
 @implementation NewsDetailsViewController
@@ -41,7 +43,21 @@
                  @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
                  ];
 
+    
+    // Do any additional setup after loading the view.
+    
+    NSString *topicId = [self.news.article valueForKey:@"id"];
+    
+    [[Server sharedInstance] getSocialNews:^(NSArray *socialNews) {
+        self.socialNews = socialNews;
+    } forTopicId:topicId failureHandler:^(NSError *e) {
+        NSLog(@"error %@", e);
+    }];
+
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
