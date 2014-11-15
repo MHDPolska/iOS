@@ -13,7 +13,7 @@
 #import "NewsDetailsViewController.h"
 
 
-@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate >
+@interface FeedViewController () <UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate >
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic,strong) NSIndexPath *selectedCellIndexPath;
@@ -25,7 +25,8 @@
 @implementation FeedViewController
 
 - (void)viewDidAppear:(BOOL)animated {
-
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     [super viewDidAppear:animated];
     self.navigationController.delegate = self;
     [[Server sharedInstance]getTopics:^(NSArray *news) {
@@ -36,7 +37,10 @@
     }];
 }
 
-
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return YES;
+}
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
