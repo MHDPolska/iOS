@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="439.5" y="399"/>
         </scene>
-        <!--View Controller-->
+        <!--Article View Controller-->
         <scene sceneID="6XB-ZF-geZ">
             <objects>
-                <viewController id="pbj-xY-1Ku" sceneMemberID="viewController">
+                <viewController id="pbj-xY-1Ku" customClass="ArticleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GNY-B1-PK4"/>
                         <viewControllerLayoutGuide type="bottom" id="yO2-4L-YYN"/>
@@ -224,43 +224,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H54-X4-xU2">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHf-Tg-PjV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Hong Kong Federation of Students leader Alex Chow said on Thursday he planned to travel to Beijing with fellow activists Eason Chung and Nathan Law and they hoped to meet Chinese Premier Li Keqiang.
-
-Beijing has called the protests in Hong Kong illegal, as has the Hong Kong government, and there is no guarantee that it will allow the activists in.
-
-Some Hong Kong business people have called for the protests to end, saying they are undermining confidence in the free-wheeling capitalist hub and could threaten stability.
-
-Media said on Friday that police could start to clear the key protest sites on Monday or Tuesday. A lawyer representing two groups opposed to the protests said such a move could be delayed by one or two days because the wording of a legal document allowing the clearance was too vague.
-
-China rules Hong Kong under a "one country, two systems" formula that accords the city a degree of autonomy and freedom not enjoyed in mainland China, with universal suffrage an eventual goal.
-
-But Beijing said in August that only candidates screened by a nominating committee will be able to contest a full city-wide vote to choose the next chief executive in 2017.
-
-At its peak, 100,000 protesters took to the streets. Those numbers have dwindled significantly, but a hardcore group of demonstrators, mostly students, has kept up the pressure on Hong Kong authorities.
-
-(Reporting by Anne Marie Roantree, Diana Chan and Kinling Lo; Editing by Nick Macfie)</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                                 </variation>
-                            </textView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="H54-X4-xU2"/>
+                                <exclude reference="OHf-Tg-PjV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="H54-X4-xU2"/>
+                                <include reference="OHf-Tg-PjV"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="OHf-Tg-PjV" id="yUh-fM-Ptl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-aw-ayV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,9 +377,6 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="231" y="163" width="147" height="21"/>
                                                     </variation>
-                                                    <connections>
-                                                        <segue destination="pbj-xY-1Ku" kind="show" id="Npy-Xf-sCS"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <variation key="default">
@@ -429,7 +412,7 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ery-ZU-0as" id="cGq-N5-eG1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honk_kong" translatesAutoresizingMaskIntoConstraints="NO" id="hZk-zE-Tqz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honk_kong" translatesAutoresizingMaskIntoConstraints="NO" id="hZk-zE-Tqz">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="0.0" y="0.0" width="400" height="191"/>
@@ -495,38 +478,45 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsVideoCell" rowHeight="185" id="coH-m6-Qy3" customClass="NewsVideoCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordViewCell" rowHeight="54" id="Jal-Hg-G4A" customClass="RecordViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="coH-m6-Qy3" id="sGS-xz-y5j">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jal-Hg-G4A" id="jtC-fO-bbz">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hk_yt" translatesAutoresizingMaskIntoConstraints="NO" id="BYM-B6-r8h">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-xa-7dK">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="185"/>
+                                                        <rect key="frame" x="225" y="16" width="94" height="21"/>
                                                     </variation>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_button" translatesAutoresizingMaskIntoConstraints="NO" id="Oku-aT-588">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxY-AE-e1X">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" backgroundImage="add">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="155" y="69" width="64" height="64"/>
+                                                        <rect key="frame" x="327" y="12" width="30" height="30"/>
                                                     </variation>
-                                                </imageView>
+                                                </button>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="BYM-B6-r8h"/>
-                                                    <exclude reference="Oku-aT-588"/>
+                                                    <exclude reference="wPv-xa-7dK"/>
+                                                    <exclude reference="oxY-AE-e1X"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="BYM-B6-r8h"/>
-                                                    <include reference="Oku-aT-588"/>
+                                                    <include reference="wPv-xa-7dK"/>
+                                                    <include reference="oxY-AE-e1X"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -570,16 +560,11 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Honk Kong" id="0nP-rN-yT1">
-                        <barButtonItem key="rightBarButtonItem" title="Record" id="YtM-sP-Yoe">
-                            <connections>
-                                <action selector="recordVideo:" destination="DpD-Fs-rqm" id="ovP-gg-pM4"/>
-                                <segue destination="pth-tc-ixT" kind="show" id="nAI-x6-4T6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Honk Kong" id="0nP-rN-yT1"/>
                     <connections>
                         <outlet property="tableView" destination="T4K-Ej-UfE" id="XVG-vf-ddj"/>
+                        <segue destination="pbj-xY-1Ku" kind="show" identifier="showArticle" id="A3s-Tm-pMg"/>
+                        <segue destination="pth-tc-ixT" kind="show" identifier="showRecord" id="6mY-QL-GCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvF-v4-2VY" sceneMemberID="firstResponder"/>
@@ -618,10 +603,9 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
         </scene>
     </scenes>
     <resources>
-        <image name="hk_yt" width="960" height="562"/>
+        <image name="add" width="60" height="60"/>
         <image name="honk_kong" width="640" height="640"/>
         <image name="instagram" width="32" height="32"/>
-        <image name="play_button" width="64" height="64"/>
         <image name="politic_face" width="640" height="430"/>
         <image name="shadow.png" width="635" height="131"/>
     </resources>
