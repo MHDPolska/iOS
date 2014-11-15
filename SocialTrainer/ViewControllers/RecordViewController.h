@@ -14,6 +14,5 @@
 @property (strong, nonatomic) NSURL *videoURL;
 @property (strong, nonatomic) MPMoviePlayerController *videoController;
 
-- (IBAction)captureVideo:(id)sender;
 
 @end
