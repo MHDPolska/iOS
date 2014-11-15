@@ -11,4 +11,11 @@
 
 @interface NewsHeaderCell : MHCell
 
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *headerLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *backgroundImage;
+
+
+
+
 @end

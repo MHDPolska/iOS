@@ -27,7 +27,6 @@
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     cellsData = @[
                 @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
-                 @{@"cellIdentifier":[NewsTitleCell cellIdentifier], @"height": @([NewsTitleCell cellHeight])},
                  @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
                  @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
                  @{@"cellIdentifier":[NewsVideoCell cellIdentifier], @"height": @([NewsVideoCell cellHeight])}

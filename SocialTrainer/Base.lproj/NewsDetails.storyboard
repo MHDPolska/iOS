@@ -34,5 +34,326 @@
             </objects>
             <point key="canvasLocation" x="130" y="305"/>
         </scene>
+        <!--Honk Kong-->
+        <scene sceneID="dg6-Ba-K0u">
+            <objects>
+                <viewController id="Sz1-AJ-jc8" customClass="NewsDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wPB-6O-pZJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cvL-UJ-0l0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BKk-jk-adb">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="43" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="z6Z-Od-RxL">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="200" id="3sY-mF-6Jj" customClass="FeedCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3sY-mF-6Jj" id="WMo-na-d5p">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-MK-2p4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="iOF-MK-2p4" secondAttribute="trailing" id="DMx-gg-iU9"/>
+                                                <constraint firstItem="iOF-MK-2p4" firstAttribute="top" secondItem="WMo-na-d5p" secondAttribute="top" id="Wrj-0v-7xB"/>
+                                                <constraint firstItem="iOF-MK-2p4" firstAttribute="leading" secondItem="WMo-na-d5p" secondAttribute="leading" id="ghh-E9-UqR"/>
+                                                <constraint firstAttribute="bottom" secondItem="iOF-MK-2p4" secondAttribute="bottom" id="oGb-Dy-RfI"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="iOF-MK-2p4"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="oGb-Dy-RfI"/>
+                                                    <exclude reference="DMx-gg-iU9"/>
+                                                    <exclude reference="Wrj-0v-7xB"/>
+                                                    <exclude reference="ghh-E9-UqR"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="iOF-MK-2p4"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="oGb-Dy-RfI"/>
+                                                    <include reference="DMx-gg-iU9"/>
+                                                    <include reference="Wrj-0v-7xB"/>
+                                                    <include reference="ghh-E9-UqR"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="thumbnail" destination="iOF-MK-2p4" id="Oex-Li-Z2k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsHeaderCell" rowHeight="215" id="tlc-Bc-V5g" customClass="NewsHeaderCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlc-Bc-V5g" id="eDI-ll-TAz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="politic_face" translatesAutoresizingMaskIntoConstraints="NO" id="0kK-Oj-qZi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                    </variation>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-5k-4Fl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="emH-F4-1NB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                        </variation>
+                                                    </view>
+                                                    <blurEffect style="light"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                    </variation>
+                                                </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifa weitet Ermittlungen gegen Beckenbauer aus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-F2-QD7">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="15" y="8" width="323" height="43"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aI-Sy-L0S">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <string key="text">Nachdem Franz Beckenbauer im Juni von der Fifa wegen mangelnder Kooperation gesperrt worden war, ermittelt der Weltverband nun weiter: Es geht um mögliche Verstöße gegen das Ethik-Reglement.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="10" y="70" width="360" height="87"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More from Die Welt..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-TY-qhb">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
+                                                    <color key="textColor" red="0.44705882349999998" green="0.87843137250000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="231" y="158" width="147" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFF-Ms-bHj">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="15" y="186" width="129" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="0kK-Oj-qZi"/>
+                                                    <exclude reference="lgY-5k-4Fl"/>
+                                                    <exclude reference="hAA-F2-QD7"/>
+                                                    <exclude reference="7aI-Sy-L0S"/>
+                                                    <exclude reference="5n6-TY-qhb"/>
+                                                    <exclude reference="PFF-Ms-bHj"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="0kK-Oj-qZi"/>
+                                                    <include reference="lgY-5k-4Fl"/>
+                                                    <include reference="hAA-F2-QD7"/>
+                                                    <include reference="7aI-Sy-L0S"/>
+                                                    <include reference="5n6-TY-qhb"/>
+                                                    <include reference="PFF-Ms-bHj"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="0kK-Oj-qZi" id="yi3-Yq-O6C"/>
+                                            <outlet property="headerLabel" destination="7aI-Sy-L0S" id="3Ge-Ws-eaI"/>
+                                            <outlet property="titleLabel" destination="hAA-F2-QD7" id="zbZ-yC-kkW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsFeedCell" rowHeight="191" id="DHr-yS-hMH" customClass="NewsFeedCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DHr-yS-hMH" id="ehn-fe-7rH">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honk_kong" translatesAutoresizingMaskIntoConstraints="NO" id="J36-CK-tth">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="191"/>
+                                                    </variation>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kau-yG-pou">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRL-g6-BSd">
+                                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                                <rect key="frame" x="15" y="8" width="55" height="21"/>
+                                                            </variation>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="sOI-tP-vrq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                                <rect key="frame" x="83" y="3" width="32" height="32"/>
+                                                            </variation>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 hours ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRB-57-oPz">
+                                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                                <rect key="frame" x="128" y="10" width="101" height="21"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="IRL-g6-BSd"/>
+                                                            <exclude reference="sOI-tP-vrq"/>
+                                                            <exclude reference="QRB-57-oPz"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="152" width="400" height="39"/>
+                                                        <mask key="subviews">
+                                                            <include reference="IRL-g6-BSd"/>
+                                                            <include reference="sOI-tP-vrq"/>
+                                                            <include reference="QRB-57-oPz"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="J36-CK-tth"/>
+                                                    <exclude reference="kau-yG-pou"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="J36-CK-tth"/>
+                                                    <include reference="kau-yG-pou"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsVideoCell" rowHeight="185" id="UKp-8g-IHv" customClass="NewsVideoCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKp-8g-IHv" id="3Km-pY-vQz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hk_yt" translatesAutoresizingMaskIntoConstraints="NO" id="759-qn-rVu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="185"/>
+                                                    </variation>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_button" translatesAutoresizingMaskIntoConstraints="NO" id="Fyv-aO-9W1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="155" y="69" width="64" height="64"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="759-qn-rVu"/>
+                                                    <exclude reference="Fyv-aO-9W1"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="759-qn-rVu"/>
+                                                    <include reference="Fyv-aO-9W1"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sz1-AJ-jc8" id="uo9-VV-nO8"/>
+                                    <outlet property="delegate" destination="Sz1-AJ-jc8" id="FN1-xh-uGG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="z6Z-Od-RxL" secondAttribute="trailing" id="5z7-Ti-hwm"/>
+                            <constraint firstItem="cvL-UJ-0l0" firstAttribute="top" secondItem="z6Z-Od-RxL" secondAttribute="bottom" id="PAb-1A-eZi">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="z6Z-Od-RxL" firstAttribute="top" secondItem="BKk-jk-adb" secondAttribute="top" id="XcT-yk-XhL">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="z6Z-Od-RxL" firstAttribute="leading" secondItem="BKk-jk-adb" secondAttribute="leading" id="tNy-fo-kfB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="z6Z-Od-RxL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="PAb-1A-eZi"/>
+                                <exclude reference="5z7-Ti-hwm"/>
+                                <exclude reference="XcT-yk-XhL"/>
+                                <exclude reference="tNy-fo-kfB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="z6Z-Od-RxL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="PAb-1A-eZi"/>
+                                <include reference="5z7-Ti-hwm"/>
+                                <include reference="XcT-yk-XhL"/>
+                                <include reference="tNy-fo-kfB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Honk Kong" id="8w9-9H-dVi">
+                        <barButtonItem key="rightBarButtonItem" title="Record" id="jTZ-ge-UuF">
+                            <connections>
+                                <action selector="recordVideo:" destination="Sz1-AJ-jc8" id="bOT-cX-bfU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="z6Z-Od-RxL" id="9zh-aM-m8m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYk-vb-vy9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1338" y="399"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="hk_yt" width="960" height="562"/>
+        <image name="honk_kong" width="640" height="640"/>
+        <image name="instagram" width="32" height="32"/>
+        <image name="play_button" width="64" height="64"/>
+        <image name="politic_face" width="640" height="430"/>
+    </resources>
 </document>

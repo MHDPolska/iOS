@@ -183,74 +183,95 @@
                                             <outlet property="thumbnail" destination="QrE-eO-94R" id="VUE-3h-xuH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTitleCell" rowHeight="67" id="J3S-se-GR6" customClass="NewsTitleCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J3S-se-GR6" id="iMg-aK-k63">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Honk Kong, China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idg-eO-7g5">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="260" y="37" width="122" height="21"/>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thousands Rally For Democracy In China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-D1-Bly">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="22" y="13" width="344" height="21"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="idg-eO-7g5"/>
-                                                    <exclude reference="3jT-D1-Bly"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="idg-eO-7g5"/>
-                                                    <include reference="3jT-D1-Bly"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsHeaderCell" rowHeight="125" id="QeN-rZ-G2C" customClass="NewsHeaderCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsHeaderCell" rowHeight="215" id="QeN-rZ-G2C" customClass="NewsHeaderCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QeN-rZ-G2C" id="Do3-Mv-uJr">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qiy-4L-GI2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="politic_face" translatesAutoresizingMaskIntoConstraints="NO" id="Ztr-kP-NeR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                    </variation>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfY-vC-fPP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uVB-5o-Oym">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                        </variation>
+                                                    </view>
+                                                    <blurEffect style="light"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                    </variation>
+                                                </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifa weitet Ermittlungen gegen Beckenbauer aus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qiy-4L-GI2">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <string key="text">Three Hong Kong student leaders plan to take their fight for greater democracy to Beijing on Saturday as frustration grows over the city government's inability to negotiate on electoral reforms in the former British colony.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="9" y="8" width="382" height="109"/>
+                                                        <rect key="frame" x="15" y="8" width="323" height="43"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yff-dd-UMB">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <string key="text">Nachdem Franz Beckenbauer im Juni von der Fifa wegen mangelnder Kooperation gesperrt worden war, ermittelt der Weltverband nun weiter: Es geht um mögliche Verstöße gegen das Ethik-Reglement.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="10" y="70" width="360" height="87"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More from Die Welt..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS9-Kn-Nax">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
+                                                    <color key="textColor" red="0.44705882352941179" green="0.8784313725490196" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="231" y="158" width="147" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsF-6E-1Zr">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="15" y="186" width="129" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
+                                                    <exclude reference="Ztr-kP-NeR"/>
+                                                    <exclude reference="UfY-vC-fPP"/>
                                                     <exclude reference="Qiy-4L-GI2"/>
+                                                    <exclude reference="yff-dd-UMB"/>
+                                                    <exclude reference="aS9-Kn-Nax"/>
+                                                    <exclude reference="WsF-6E-1Zr"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
+                                                    <include reference="Ztr-kP-NeR"/>
+                                                    <include reference="UfY-vC-fPP"/>
                                                     <include reference="Qiy-4L-GI2"/>
+                                                    <include reference="yff-dd-UMB"/>
+                                                    <include reference="aS9-Kn-Nax"/>
+                                                    <include reference="WsF-6E-1Zr"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundImage" destination="Ztr-kP-NeR" id="Wf2-b3-E4o"/>
+                                            <outlet property="headerLabel" destination="yff-dd-UMB" id="7zI-ct-78N"/>
+                                            <outlet property="titleLabel" destination="Qiy-4L-GI2" id="quH-in-P9O"/>
                                             <segue destination="pbj-xY-1Ku" kind="show" id="of6-op-rWE"/>
                                         </connections>
                                     </tableViewCell>
@@ -370,9 +391,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wmy-YS-QXx" secondAttribute="trailing" id="G5O-B0-Dx8"/>
                             <constraint firstItem="wmy-YS-QXx" firstAttribute="top" secondItem="JYV-ie-mp4" secondAttribute="top" id="JYl-OC-WdJ">
-                                <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="q8s-2m-NOz" firstAttribute="top" secondItem="wmy-YS-QXx" secondAttribute="bottom" id="kg7-QM-84f"/>
+                            <constraint firstItem="q8s-2m-NOz" firstAttribute="top" secondItem="wmy-YS-QXx" secondAttribute="bottom" id="kg7-QM-84f">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="wmy-YS-QXx" firstAttribute="leading" secondItem="JYV-ie-mp4" secondAttribute="leading" id="sUY-GX-Fb7"/>
                         </constraints>
                         <variation key="default">
@@ -398,6 +421,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Honk Kong" id="CPB-9H-eLe">
                         <barButtonItem key="rightBarButtonItem" title="Record" id="kRE-ll-Umv">
                             <connections>
@@ -424,43 +448,7 @@
                     <view key="view" contentMode="scaleToFill" id="Moj-J6-6Ii">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H54-X4-xU2">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Hong Kong Federation of Students leader Alex Chow said on Thursday he planned to travel to Beijing with fellow activists Eason Chung and Nathan Law and they hoped to meet Chinese Premier Li Keqiang.
-
-Beijing has called the protests in Hong Kong illegal, as has the Hong Kong government, and there is no guarantee that it will allow the activists in.
-
-Some Hong Kong business people have called for the protests to end, saying they are undermining confidence in the free-wheeling capitalist hub and could threaten stability.
-
-Media said on Friday that police could start to clear the key protest sites on Monday or Tuesday. A lawyer representing two groups opposed to the protests said such a move could be delayed by one or two days because the wording of a legal document allowing the clearance was too vague.
-
-China rules Hong Kong under a "one country, two systems" formula that accords the city a degree of autonomy and freedom not enjoyed in mainland China, with universal suffrage an eventual goal.
-
-But Beijing said in August that only candidates screened by a nominating committee will be able to contest a full city-wide vote to choose the next chief executive in 2017.
-
-At its peak, 100,000 protesters took to the streets. Those numbers have dwindled significantly, but a hardcore group of demonstrators, mostly students, has kept up the pressure on Hong Kong authorities.
-
-(Reporting by Anne Marie Roantree, Diana Chan and Kinling Lo; Editing by Nick Macfie)</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="H54-X4-xU2"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="H54-X4-xU2"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-aw-ayV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -473,5 +461,6 @@ At its peak, 100,000 protesters took to the streets. Those numbers have dwindled
         <image name="honk_kong" width="640" height="640"/>
         <image name="instagram" width="32" height="32"/>
         <image name="play_button" width="64" height="64"/>
+        <image name="politic_face" width="640" height="430"/>
     </resources>
 </document>
