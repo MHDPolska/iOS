@@ -1,0 +1,40 @@
+PODS:
+  - AFNetworking (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - ISO8601DateFormatter (0.7)
+  - JSONModel (1.0.1):
+    - ISO8601DateFormatter
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - JSONModel (from `git@github.com:pilotcreative/JSONModel.git`)
+
+EXTERNAL SOURCES:
+  JSONModel:
+    :git: git@github.com:pilotcreative/JSONModel.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  ISO8601DateFormatter: 59731cd880cf87e71b4fa95f0d6b713dcbc4cbce
+  JSONModel: 18974827034fb3a3dd3a2006eed801e0168ba8c6
+
+COCOAPODS: 0.34.4
