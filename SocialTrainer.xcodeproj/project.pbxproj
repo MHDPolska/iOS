@@ -28,6 +28,7 @@
 		50C50EF41A1758F3003EDE77 /* SocialTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50EF31A1758F3003EDE77 /* SocialTrainerTests.m */; };
 		72A25DD8F5627A7540F8E6E2 /* libPods-SocialTrainer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ED5EF15B70AB610917DB8E /* libPods-SocialTrainer.a */; };
 		910C66941A17AD0D00805AD4 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 910C66931A17AD0D00805AD4 /* download.jpeg */; };
+		914B850C1A17C6A400506B31 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 914B850B1A17C6A400506B31 /* shadow.png */; };
 		91AEA3D61A17BF8300D01900 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AEA3D51A17BF8300D01900 /* NewsModel.m */; };
 		91AEA3D91A17BF9200D01900 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AEA3D81A17BF9200D01900 /* ArticleModel.m */; };
 		91AEA3DC1A17C08600D01900 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AEA3DB1A17C08600D01900 /* Server.m */; };
@@ -82,6 +83,7 @@
 		50C50EF21A1758F3003EDE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C50EF31A1758F3003EDE77 /* SocialTrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialTrainerTests.m; sourceTree = "<group>"; };
 		910C66931A17AD0D00805AD4 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
+		914B850B1A17C6A400506B31 /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow.png; sourceTree = "<group>"; };
 		91AEA3D41A17BF8300D01900 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		91AEA3D51A17BF8300D01900 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		91AEA3D71A17BF9200D01900 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		50C50ED61A1758F3003EDE77 /* SocialTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				914B850B1A17C6A400506B31 /* shadow.png */,
 				91AEA3D21A17BF3000D01900 /* Server */,
 				910C66931A17AD0D00805AD4 /* download.jpeg */,
 				91AFFE271A178CB000EA8839 /* ViewControllers */,
@@ -402,6 +405,7 @@
 				910C66941A17AD0D00805AD4 /* download.jpeg in Resources */,
 				50C50EE81A1758F3003EDE77 /* LaunchScreen.xib in Resources */,
 				50C50EE51A1758F3003EDE77 /* Images.xcassets in Resources */,
+				914B850C1A17C6A400506B31 /* shadow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

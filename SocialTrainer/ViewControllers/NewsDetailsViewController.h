@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsModel.h"
 
 @interface NewsDetailsViewController : UIViewController
+
+@property (nonatomic,strong) NewsModel *news;
 
 
 @end

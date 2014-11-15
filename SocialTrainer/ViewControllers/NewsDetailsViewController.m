@@ -47,7 +47,7 @@
     MHCell *cell = [tableView dequeueReusableCellWithIdentifier:cellData[@"cellIdentifier"]
                                                    forIndexPath:indexPath];
     
-    [cell loadData:nil];
+    [cell loadData:self.news];
     return cell;
 }
 

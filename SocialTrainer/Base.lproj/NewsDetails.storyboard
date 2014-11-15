@@ -73,10 +73,10 @@
                                                     <exclude reference="iOF-MK-2p4"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="oGb-Dy-RfI"/>
                                                     <exclude reference="DMx-gg-iU9"/>
                                                     <exclude reference="Wrj-0v-7xB"/>
                                                     <exclude reference="ghh-E9-UqR"/>
+                                                    <exclude reference="oGb-Dy-RfI"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -84,10 +84,10 @@
                                                     <include reference="iOF-MK-2p4"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="oGb-Dy-RfI"/>
                                                     <include reference="DMx-gg-iU9"/>
                                                     <include reference="Wrj-0v-7xB"/>
                                                     <include reference="ghh-E9-UqR"/>
+                                                    <include reference="oGb-Dy-RfI"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -113,12 +113,12 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                         </variation>
                                                     </view>
                                                     <blurEffect style="light"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                     </variation>
                                                 </visualEffectView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifa weitet Ermittlungen gegen Beckenbauer aus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-F2-QD7">
@@ -314,10 +314,10 @@
                                 <exclude reference="z6Z-Od-RxL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="PAb-1A-eZi"/>
                                 <exclude reference="5z7-Ti-hwm"/>
                                 <exclude reference="XcT-yk-XhL"/>
                                 <exclude reference="tNy-fo-kfB"/>
+                                <exclude reference="PAb-1A-eZi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -325,10 +325,10 @@
                                 <include reference="z6Z-Od-RxL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="PAb-1A-eZi"/>
                                 <include reference="5z7-Ti-hwm"/>
                                 <include reference="XcT-yk-XhL"/>
                                 <include reference="tNy-fo-kfB"/>
+                                <include reference="PAb-1A-eZi"/>
                             </mask>
                         </variation>
                     </view>
