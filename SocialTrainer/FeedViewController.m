@@ -21,21 +21,21 @@
 @implementation FeedViewController
 
 - (void)viewDidAppear:(BOOL)animated {
+
     [super viewDidAppear:animated];
-    
-    // Set outself as the navigation controller's delegate so we're asked for a transitioning object
     self.navigationController.delegate = self;
+    
 }
 
 
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
-    // Stop being the navigation controller's delegate
+
     if (self.navigationController.delegate == self) {
         self.navigationController.delegate = nil;
     }
+    
 }
 
 - (FeedCell*)getSelectedCell
@@ -46,8 +46,8 @@
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
-    
+    FeedCell *cell = (FeedCell*) [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
+    [cell loadData:nil];
     return cell;
 }
 

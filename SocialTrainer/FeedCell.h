@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MHCell.h"
 
-@interface FeedCell : UITableViewCell
+@interface FeedCell : MHCell
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 
 - (UIView*)getVideoView;
+
 
 @end
 

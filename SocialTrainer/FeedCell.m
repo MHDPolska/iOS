@@ -10,9 +10,24 @@
 
 @implementation FeedCell
 
+
+- (void)loadData:(id)data
+{
+    self.thumbnail.image = [UIImage imageNamed:@"download.jpeg"];
+}
+
 - (UIView*)getVideoView
 {
-    return self.contentView;
+    return self.thumbnail;
 }
+
+
+
+
++ (CGFloat)cellHeight
+{
+    return 200;
+}
+
 
 @end

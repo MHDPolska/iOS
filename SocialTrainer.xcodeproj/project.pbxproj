@@ -27,6 +27,7 @@
 		50C50EE81A1758F3003EDE77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C50EE61A1758F3003EDE77 /* LaunchScreen.xib */; };
 		50C50EF41A1758F3003EDE77 /* SocialTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C50EF31A1758F3003EDE77 /* SocialTrainerTests.m */; };
 		72A25DD8F5627A7540F8E6E2 /* libPods-SocialTrainer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ED5EF15B70AB610917DB8E /* libPods-SocialTrainer.a */; };
+		910C66941A17AD0D00805AD4 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 910C66931A17AD0D00805AD4 /* download.jpeg */; };
 		91AFFE1E1A177BBA00EA8839 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFFE1D1A177BBA00EA8839 /* FeedViewController.m */; };
 		91AFFE221A177C3A00EA8839 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFFE211A177C3A00EA8839 /* FeedCell.m */; };
 		91AFFE261A177EB300EA8839 /* PCTransitionFromFirstToSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFFE251A177EB300EA8839 /* PCTransitionFromFirstToSecond.m */; };
@@ -77,6 +78,7 @@
 		50C50EED1A1758F3003EDE77 /* SocialTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C50EF21A1758F3003EDE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50C50EF31A1758F3003EDE77 /* SocialTrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialTrainerTests.m; sourceTree = "<group>"; };
+		910C66931A17AD0D00805AD4 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 		91AFFE1C1A177BBA00EA8839 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = ../FeedViewController.h; sourceTree = "<group>"; };
 		91AFFE1D1A177BBA00EA8839 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = ../FeedViewController.m; sourceTree = "<group>"; };
 		91AFFE201A177C3A00EA8839 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		50C50ED61A1758F3003EDE77 /* SocialTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				910C66931A17AD0D00805AD4 /* download.jpeg */,
 				91AFFE271A178CB000EA8839 /* ViewControllers */,
 				5093CB891A178A8D00DA6A5C /* NewsDetails.storyboard */,
 				5093CB781A178A6000DA6A5C /* Views */,
@@ -365,6 +368,7 @@
 			files = (
 				5093CB8B1A178A8D00DA6A5C /* NewsDetails.storyboard in Resources */,
 				50C50EE31A1758F3003EDE77 /* Main.storyboard in Resources */,
+				910C66941A17AD0D00805AD4 /* download.jpeg in Resources */,
 				50C50EE81A1758F3003EDE77 /* LaunchScreen.xib in Resources */,
 				50C50EE51A1758F3003EDE77 /* Images.xcassets in Resources */,
 			);
