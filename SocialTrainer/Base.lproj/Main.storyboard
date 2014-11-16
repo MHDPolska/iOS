@@ -73,15 +73,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cn.png" translatesAutoresizingMaskIntoConstraints="NO" id="L4z-Df-W7y">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="tU4-pM-W4h"/>
+                                    <constraint firstAttribute="height" constant="115" id="uNv-Is-QJV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tU4-pM-W4h"/>
+                                        <exclude reference="uNv-Is-QJV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="tU4-pM-W4h"/>
+                                        <include reference="uNv-Is-QJV"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bHL-q4-WQU" firstAttribute="leading" secondItem="64j-cA-fGH" secondAttribute="leadingMargin" constant="40" id="DOL-b3-li9"/>
+                            <constraint firstItem="L4z-Df-W7y" firstAttribute="top" secondItem="vVr-4G-I74" secondAttribute="bottom" constant="16" id="Iqa-f7-ihS"/>
                             <constraint firstItem="1tD-5d-SdK" firstAttribute="top" secondItem="vVr-4G-I74" secondAttribute="bottom" id="LE7-uU-IRw">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="1iO-kW-H3x" firstAttribute="top" secondItem="1tD-5d-SdK" secondAttribute="bottom" id="LJe-rc-ybz"/>
                             <constraint firstItem="9y9-Ya-yV4" firstAttribute="top" secondItem="bHL-q4-WQU" secondAttribute="bottom" constant="60" id="OJo-AZ-loS"/>
+                            <constraint firstItem="L4z-Df-W7y" firstAttribute="leading" secondItem="64j-cA-fGH" secondAttribute="leadingMargin" constant="12" id="cJp-iE-0zN"/>
                             <constraint firstItem="9y9-Ya-yV4" firstAttribute="leading" secondItem="64j-cA-fGH" secondAttribute="leading" constant="80" id="fcZ-Ju-sTS"/>
                             <constraint firstItem="bHL-q4-WQU" firstAttribute="top" secondItem="1iO-kW-H3x" secondAttribute="bottom" constant="10" id="iQ6-gM-bLU"/>
                             <constraint firstItem="OfI-Uy-rM8" firstAttribute="top" secondItem="9y9-Ya-yV4" secondAttribute="bottom" constant="70" id="ksp-Ow-8NR"/>
@@ -99,11 +120,15 @@
                                 <exclude reference="9y9-Ya-yV4"/>
                                 <exclude reference="bHL-q4-WQU"/>
                                 <exclude reference="1iO-kW-H3x"/>
+                                <exclude reference="L4z-Df-W7y"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="LE7-uU-IRw"/>
+                                <exclude reference="lYP-yV-rHG"/>
+                                <exclude reference="rcR-aC-1u3"/>
+                                <exclude reference="Iqa-f7-ihS"/>
+                                <exclude reference="cJp-iE-0zN"/>
                                 <exclude reference="LJe-rc-ybz"/>
-                                <exclude reference="ksp-Ow-8NR"/>
-                                <exclude reference="wz2-eb-rIi"/>
                                 <exclude reference="DOL-b3-li9"/>
                                 <exclude reference="iQ6-gM-bLU"/>
                                 <exclude reference="rql-yN-OE9"/>
@@ -112,9 +137,8 @@
                                 <exclude reference="OJo-AZ-loS"/>
                                 <exclude reference="fcZ-Ju-sTS"/>
                                 <exclude reference="xq7-nl-fTK"/>
-                                <exclude reference="LE7-uU-IRw"/>
-                                <exclude reference="lYP-yV-rHG"/>
-                                <exclude reference="rcR-aC-1u3"/>
+                                <exclude reference="ksp-Ow-8NR"/>
+                                <exclude reference="wz2-eb-rIi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -123,11 +147,15 @@
                                 <include reference="9y9-Ya-yV4"/>
                                 <include reference="bHL-q4-WQU"/>
                                 <include reference="1iO-kW-H3x"/>
+                                <include reference="L4z-Df-W7y"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="LE7-uU-IRw"/>
+                                <include reference="lYP-yV-rHG"/>
+                                <include reference="rcR-aC-1u3"/>
+                                <include reference="Iqa-f7-ihS"/>
+                                <include reference="cJp-iE-0zN"/>
                                 <exclude reference="LJe-rc-ybz"/>
-                                <include reference="ksp-Ow-8NR"/>
-                                <include reference="wz2-eb-rIi"/>
                                 <include reference="DOL-b3-li9"/>
                                 <include reference="iQ6-gM-bLU"/>
                                 <include reference="rql-yN-OE9"/>
@@ -136,9 +164,8 @@
                                 <include reference="OJo-AZ-loS"/>
                                 <include reference="fcZ-Ju-sTS"/>
                                 <include reference="xq7-nl-fTK"/>
-                                <include reference="LE7-uU-IRw"/>
-                                <include reference="lYP-yV-rHG"/>
-                                <include reference="rcR-aC-1u3"/>
+                                <include reference="ksp-Ow-8NR"/>
+                                <include reference="wz2-eb-rIi"/>
                             </mask>
                         </variation>
                     </view>
@@ -914,6 +941,7 @@
     <resources>
         <image name="Rectangle 2.png" width="480" height="100"/>
         <image name="add" width="60" height="60"/>
+        <image name="cn.png" width="281" height="202"/>
         <image name="instagram" width="32" height="32"/>
         <image name="loginScreen.jpg" width="750" height="1334"/>
         <image name="shadow.png" width="635" height="131"/>
