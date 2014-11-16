@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MHCell.h"
 
-
+@class XCDYouTubeVideoPlayerViewController;
 @interface NewsFeedCell : MHCell
 @property (nonatomic, weak) IBOutlet UIImageView *avatar;
 @property (nonatomic, weak) IBOutlet UILabel *text;
 @property (nonatomic, weak) IBOutlet UIView *ytView;
+@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 
 @end

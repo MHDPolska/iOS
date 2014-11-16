@@ -19,11 +19,10 @@
 
 
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) NSArray *cellsData;
+@property (nonatomic, strong) NSMutableArray *cellsData;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *socialNews;
 @property (nonatomic, strong) NSMutableArray *ytPlayers;
-@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 @end
 
 @implementation NewsDetailsViewController
@@ -39,28 +38,37 @@
     [super viewDidLoad];
     self.title = self.news.name;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
-    cellsData = @[
+    cellsData = [NSMutableArray arrayWithArray:@[
                 @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
                  @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
-                 @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
+//                 @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
                  @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
-                 ];
+                 ]];
 
     
     // Do any additional setup after loading the view.
-    _videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"bru0iNWJ13Q"];
-
-    NSString *topicId = [self.news.article valueForKey:@"id"];
-    
-    [[Server sharedInstance] getSocialNews:^(NSArray *socialNews) {
-        self.socialNews = socialNews;
-    } forTopicId:topicId failureHandler:^(NSError *e) {
-        NSLog(@"error %@", e);
-    }];
+    [self updateSocialNews];
 
 }
 
 
+- (void)updateSocialNews
+{
+    NSString *topicId = [self.news.article valueForKey:@"id"];
+    [[Server sharedInstance] getSocialNews:^(NSArray *socialNews) {
+        self.socialNews = socialNews;
+        [self.socialNews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSDictionary *socialDict = @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height":@([NewsFeedCell cellHeight]),
+                                         @"object": obj};
+            [cellsData insertObject:socialDict atIndex:cellsData.count-1];
+        }];
+        [self.tableView reloadData];
+        
+    } forTopicId:topicId failureHandler:^(NSError *e) {
+        NSLog(@"error %@", e);
+    }];
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -77,8 +85,8 @@
     if ([cellIdentifier isEqualToString:[NewsFeedCell cellIdentifier]])
     {
         NewsFeedCell *nfCell = (NewsFeedCell *)cell;
-        [self.videoPlayerViewController presentInView:nfCell.ytView];
-        [self.videoPlayerViewController.moviePlayer play];
+        NSDictionary *object = self.cellsData[indexPath.row];
+        [nfCell loadData:object[@"object"]];
     }
     else
     {

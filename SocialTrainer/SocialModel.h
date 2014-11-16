@@ -12,7 +12,7 @@
 @interface SocialModel : JSONModel
 @property (nonatomic, strong) NSString *timestamp;
 @property (nonatomic, strong) NSString *content;
-@property (nonatomic, strong) NSString *videoUrl;
+@property (nonatomic, strong) NSString *videoId;
 @property (nonatomic, strong) SocialUserModel *author;
 
 @end
