@@ -72,4 +72,30 @@
     }];
 }
 
++ (NSString*)uploadForTopic:(NSString*)topicId
+{
+    return [NSString stringWithFormat:@"/topics/%@/upload",topicId];
+}
+
+- (void)uploadMovieForTopicWithID:(NSString*)topicID
+                        movieData:(NSData*)movieData
+                             name:(NSString*)name
+                          success:(void(^)(void))success
+                          failure:(void(^)(NSError*))failure
+{
+    [self.manager POST:[Server uploadForTopic:topicID] parameters:nil
+constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    
+    [formData appendPartWithFileData:movieData name:@"video" fileName:@"jakichce" mimeType:@"video/mp4"];
+    [formData appendPartWithFormData:[name dataUsingEncoding:NSUTF8StringEncoding]
+                                name:@"name"];
+
+} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    success();
+} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    failure(error);
+}];
+    
+}
+
 @end

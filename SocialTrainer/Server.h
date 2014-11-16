@@ -14,5 +14,10 @@
 + (instancetype)sharedInstance;
 - (void)getTopics:(void(^)(NSArray*))succes failureHandler:(void(^)(NSError*))failure;
 - (void)getSocialNews:(void (^)(NSArray *))success forTopicId:(NSString *)topicId failureHandler:(void (^)(NSError *))failure;
+- (void)uploadMovieForTopicWithID:(NSString*)topicID
+                        movieData:(NSData*)movieData
+                             name:(NSString*)name
+                          success:(void(^)(void))success
+                          failure:(void(^)(NSError*))failure;
 
 @end

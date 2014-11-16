@@ -13,17 +13,17 @@
 
 @implementation NewsFeedCell
 
-- (void)awakeFromNib
-{
-    // Initialization code
-}
+//- (void)awakeFromNib
+//{
+//    // Initialization code
+//}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+//{
+//    [super setSelected:selected animated:animated];
+//
+//    // Configure the view for the selected state
+//}
 
 + (CGFloat)cellHeight
 {
@@ -39,11 +39,14 @@
                                   options:SDWebImageRefreshCached];
     self.avatar.layer.cornerRadius = 30.f;
     self.avatar.clipsToBounds = YES;
-    NSString *thumbnailURL = [NSString stringWithFormat:@"http://img.youtube.com/vi/%@/hqdefault.jpg", model.videoId];
-    
+
+    NSString *thumbnailURL = [NSString stringWithFormat:@"http://img.youtube.com/vi/%@/maxresdefault.jpg", model.videoId];
+
     [self.ytView setImageWithURL:[NSURL URLWithString:thumbnailURL]
-                placeholderImage:[UIImage imageNamed:@"download.jpeg"]
+                placeholderImage:[UIImage imageNamed:@"placeholder"]
                          options:SDWebImageRefreshCached];
+
+
 }
 
 @end

@@ -423,6 +423,9 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Js-4H-EV6">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -466,6 +469,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYy-KM-ePw">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+                                                    </variation>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiC-9W-bVR">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -474,6 +480,9 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </view>
                                                     <blurEffect style="dark"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+                                                    </variation>
                                                 </visualEffectView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifa weitet Ermittlungen gegen Beckenbauer aus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-Rn-EJU">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -488,7 +497,8 @@
                                                             <exclude reference="NhG-Jm-K4n"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="15" y="8" width="243" height="43"/>
                                                         <mask key="constraints">
                                                             <include reference="NhG-Jm-K4n"/>
                                                         </mask>
@@ -508,7 +518,8 @@
                                                             <exclude reference="RW2-bB-ww7"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="10" y="70" width="280" height="87"/>
                                                         <mask key="constraints">
                                                             <include reference="RW2-bB-ww7"/>
                                                         </mask>
@@ -519,6 +530,9 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="15" y="186" width="97" height="21"/>
+                                                    </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-1M-z2o">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -527,6 +541,9 @@
                                                         <color key="titleColor" red="0.44705882349999998" green="0.87843137250000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="188" y="163" width="110" height="21"/>
+                                                    </variation>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -633,8 +650,8 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGP-pg-anC">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
                                                     </variation>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-aT-Ylq">
@@ -667,30 +684,67 @@
                                                                 <exclude reference="9Vj-tZ-5uv"/>
                                                             </mask>
                                                         </variation>
-                                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
                                                             <mask key="subviews">
                                                                 <include reference="wRe-cQ-FWE"/>
                                                                 <include reference="9Vj-tZ-5uv"/>
                                                             </mask>
                                                         </variation>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="S6V-Ys-uzO"/>
+                                                    </constraints>
                                                     <blurEffect style="dark"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="150" width="400" height="65"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="S6V-Ys-uzO"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="150" width="320" height="65"/>
+                                                        <mask key="constraints">
+                                                            <include reference="S6V-Ys-uzO"/>
+                                                        </mask>
                                                     </variation>
                                                 </visualEffectView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OGP-pg-anC" firstAttribute="leading" secondItem="cGq-N5-eG1" secondAttribute="leading" id="3J9-ov-kT2"/>
+                                                <constraint firstItem="OGP-pg-anC" firstAttribute="top" secondItem="cGq-N5-eG1" secondAttribute="top" id="9vh-9t-an3"/>
+                                                <constraint firstAttribute="bottom" secondItem="OGP-pg-anC" secondAttribute="bottom" id="ArY-pI-qrE"/>
+                                                <constraint firstAttribute="trailing" secondItem="Jhb-aT-Ylq" secondAttribute="trailing" id="Jz9-6T-gs9"/>
+                                                <constraint firstItem="Jhb-aT-Ylq" firstAttribute="leading" secondItem="cGq-N5-eG1" secondAttribute="leading" id="bgW-H0-Oww"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jhb-aT-Ylq" secondAttribute="bottom" id="dRN-5p-bYi"/>
+                                                <constraint firstAttribute="trailing" secondItem="OGP-pg-anC" secondAttribute="trailing" id="rTX-vr-GgQ"/>
+                                            </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="OGP-pg-anC"/>
                                                     <exclude reference="Jhb-aT-Ylq"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="Jz9-6T-gs9"/>
+                                                    <exclude reference="bgW-H0-Oww"/>
+                                                    <exclude reference="dRN-5p-bYi"/>
+                                                    <exclude reference="3J9-ov-kT2"/>
+                                                    <exclude reference="9vh-9t-an3"/>
+                                                    <exclude reference="ArY-pI-qrE"/>
+                                                    <exclude reference="rTX-vr-GgQ"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="OGP-pg-anC"/>
                                                     <include reference="Jhb-aT-Ylq"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="Jz9-6T-gs9"/>
+                                                    <include reference="bgW-H0-Oww"/>
+                                                    <include reference="dRN-5p-bYi"/>
+                                                    <include reference="3J9-ov-kT2"/>
+                                                    <include reference="9vh-9t-an3"/>
+                                                    <include reference="ArY-pI-qrE"/>
+                                                    <include reference="rTX-vr-GgQ"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

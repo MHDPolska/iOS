@@ -128,6 +128,11 @@
     
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -215,10 +220,12 @@
         NSString *moviePath = (NSString *)[[info objectForKey:
                                             UIImagePickerControllerMediaURL] path];
         
-        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
-            UISaveVideoAtPathToSavedPhotosAlbum (
-                                                 moviePath, nil, nil, nil);
-        }
+         NSData *data = [[NSFileManager defaultManager] contentsAtPath:moviePath];
+        [[Server sharedInstance] uploadMovieForTopicWithID:@"355e272d90b48ee8eab1de891e14510d" movieData:data name:@"nameeee" success:^{
+            
+        } failure:^(NSError *e) {
+            
+        }];
     }
 }
 
