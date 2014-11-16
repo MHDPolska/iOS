@@ -41,8 +41,8 @@
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     cellsData = [NSMutableArray arrayWithArray:@[
                 @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
-                 @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
-                 @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
+                 @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])}
+//                 @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
                  ]];
 
     
@@ -128,12 +128,6 @@
     
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    
-}
-
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showArticle"])
@@ -209,7 +203,6 @@
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
-
 
 - (void)saveVideo:(UIImagePickerController *) picker info:(NSDictionary *)info
 {
