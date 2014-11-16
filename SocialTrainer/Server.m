@@ -80,7 +80,7 @@
 - (void)uploadMovieForTopicWithID:(NSString*)topicID
                         movieData:(NSData*)movieData
                              name:(NSString*)name
-                          success:(void(^)(void))success
+                          success:(void(^)(SocialModel *))success
                           failure:(void(^)(NSError*))failure
 {
     [self.manager POST:[Server uploadForTopic:topicID] parameters:nil
@@ -90,8 +90,29 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     [formData appendPartWithFormData:[name dataUsingEncoding:NSUTF8StringEncoding]
                                 name:@"name"];
 
-} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    success();
+} success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSString *ytId = responseObject[@"id"];
+        NSDictionary *socialModel = @{	@"author": @{
+                                                @"name": @"Paweł Nużka",
+                                                @"handle": @"HernanN_N",
+                                                @"avatarUrl": @"https://pbs.twimg.com/profile_images/483963100979154944/dDxN98Hg.jpeg"
+                                                },
+                                        @"timestamp": @"Sat Nov 15 22:22:37 +0000 2014",
+                                        @"content": @"Media Hack Day",
+                                        @"videoId": ytId,
+                                        @"thumbnailURL" : responseObject[@"snippet"][@"thumbnails"][@"high"][@"url"]
+                                        };
+        
+        SocialModel *model = [[SocialModel alloc] initWithDictionary:socialModel error:nil];
+        
+        
+        
+        success(model);
+    });
+    
 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     failure(error);
 }];

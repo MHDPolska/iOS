@@ -58,17 +58,23 @@
     [[Server sharedInstance] getSocialNews:^(NSArray *socialNews) {
         self.socialNews = socialNews;
         [self.socialNews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSDictionary *socialDict = @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height":@([NewsFeedCell cellHeight]),
-                                         @"object": obj};
-            [cellsData insertObject:socialDict atIndex:cellsData.count-1];
-        }];
+            [self insertSocialModel:obj];
+         }];
         [self.tableView reloadData];
         
     } forTopicId:topicId failureHandler:^(NSError *e) {
         NSLog(@"error %@", e);
     }];
-    
 }
+
+- (void)insertSocialModel:(SocialModel *)model
+{
+    NSDictionary *socialDict = @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height":@([NewsFeedCell cellHeight]),
+                                 @"object": model};
+    [cellsData insertObject:socialDict atIndex:cellsData.count-1];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -128,10 +134,10 @@
     
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    
+//}
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -173,17 +179,17 @@
     self.videoURL = info[UIImagePickerControllerMediaURL];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    self.videoController = [[MPMoviePlayerController alloc] init];
-    
-    [self.videoController setContentURL:self.videoURL];
-    [self.videoController.view setFrame:CGRectMake (0, 0, self.view.frame.size.width, 460)];
-    [self.view addSubview:self.videoController.view];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(videoPlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:self.videoController];
-    [self.videoController play];
+//    self.videoController = [[MPMoviePlayerController alloc] init];
+//    
+//    [self.videoController setContentURL:self.videoURL];
+//    [self.videoController.view setFrame:CGRectMake (0, 0, self.view.frame.size.width, 460)];
+//    [self.view addSubview:self.videoController.view];
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(videoPlayBackDidFinish:)
+//                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+//                                               object:self.videoController];
+//    [self.videoController play];
     [self saveVideo:picker info:info];
 }
 
@@ -221,9 +227,11 @@
                                             UIImagePickerControllerMediaURL] path];
         
          NSData *data = [[NSFileManager defaultManager] contentsAtPath:moviePath];
-        [[Server sharedInstance] uploadMovieForTopicWithID:@"355e272d90b48ee8eab1de891e14510d" movieData:data name:@"nameeee" success:^{
-            
-        } failure:^(NSError *e) {
+        [[Server sharedInstance] uploadMovieForTopicWithID:@"355e272d90b48ee8eab1de891e14510d" movieData:data name:@"nameeee"
+         success:^(SocialModel *model) {
+             [self insertSocialModel:model];
+             [self.tableView reloadData];
+         } failure:^(NSError *e) {
             
         }];
     }

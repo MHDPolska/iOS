@@ -14,5 +14,5 @@
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSString *videoId;
 @property (nonatomic, strong) SocialUserModel *author;
-
+@property (nonatomic, strong) NSString<Optional>* thumbnailURL;
 @end

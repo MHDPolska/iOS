@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 
+@class SocialModel;
 
 @interface Server : NSObject
 + (instancetype)sharedInstance;
@@ -17,7 +18,7 @@
 - (void)uploadMovieForTopicWithID:(NSString*)topicID
                         movieData:(NSData*)movieData
                              name:(NSString*)name
-                          success:(void(^)(void))success
+                          success:(void(^)(SocialModel *))success
                           failure:(void(^)(NSError*))failure;
 
 @end
