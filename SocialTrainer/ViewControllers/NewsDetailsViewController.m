@@ -41,8 +41,8 @@
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     cellsData = [NSMutableArray arrayWithArray:@[
                 @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
-                 @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
-                 @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
+                 @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])}
+//                 @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
                  ]];
 
     
@@ -71,7 +71,7 @@
 {
     NSDictionary *socialDict = @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height":@([NewsFeedCell cellHeight]),
                                  @"object": model};
-    [cellsData insertObject:socialDict atIndex:cellsData.count-1];
+    [cellsData insertObject:socialDict atIndex:cellsData.count];
 }
 
 
@@ -133,12 +133,6 @@
     }
     
 }
-
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-//{
-//    
-//}
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -215,7 +209,6 @@
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
-
 
 - (void)saveVideo:(UIImagePickerController *) picker info:(NSDictionary *)info
 {
