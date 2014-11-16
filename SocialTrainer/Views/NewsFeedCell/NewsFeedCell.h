@@ -13,7 +13,7 @@
 @interface NewsFeedCell : MHCell
 @property (nonatomic, weak) IBOutlet UIImageView *avatar;
 @property (nonatomic, weak) IBOutlet UILabel *text;
-@property (nonatomic, weak) IBOutlet UIView *ytView;
+@property (nonatomic, weak) IBOutlet UIImageView *ytView;
 @property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 
 @end

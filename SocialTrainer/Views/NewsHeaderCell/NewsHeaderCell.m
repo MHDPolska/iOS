@@ -34,7 +34,7 @@
     [self.backgroundImage setImageWithURL:[NSURL URLWithString:newsModel.article.pictureUrls.firstObject]
                    placeholderImage:[UIImage imageNamed:@"download.jpeg"]
                             options:SDWebImageRefreshCached];
-
+    
 }
 
 + (CGFloat)cellHeight

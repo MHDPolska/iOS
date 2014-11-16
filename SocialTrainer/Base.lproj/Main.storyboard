@@ -631,13 +631,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ery-ZU-0as" id="cGq-N5-eG1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkJ-F1-Fcx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGP-pg-anC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
                                                     </variation>
-                                                </view>
+                                                </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-aT-Ylq">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mXW-j3-2Xl">
@@ -684,13 +683,13 @@
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="XkJ-F1-Fcx"/>
+                                                    <exclude reference="OGP-pg-anC"/>
                                                     <exclude reference="Jhb-aT-Ylq"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="XkJ-F1-Fcx"/>
+                                                    <include reference="OGP-pg-anC"/>
                                                     <include reference="Jhb-aT-Ylq"/>
                                                 </mask>
                                             </variation>
@@ -698,7 +697,7 @@
                                         <connections>
                                             <outlet property="avatar" destination="9Vj-tZ-5uv" id="XRE-1y-mfV"/>
                                             <outlet property="text" destination="wRe-cQ-FWE" id="n5E-6q-IeS"/>
-                                            <outlet property="ytView" destination="XkJ-F1-Fcx" id="kkW-6D-6bw"/>
+                                            <outlet property="ytView" destination="OGP-pg-anC" id="gVD-5b-Zyx"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordViewCell" rowHeight="54" id="Jal-Hg-G4A" customClass="RecordViewCell">

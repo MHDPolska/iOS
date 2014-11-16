@@ -16,6 +16,7 @@
 #import "ArticleModel.h"
 #import "Server.h"
 #import <XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h>
+#import "SocialModel.h"
 
 
 @interface NewsDetailsViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -41,7 +42,6 @@
     cellsData = [NSMutableArray arrayWithArray:@[
                 @{@"cellIdentifier":[FeedCell cellIdentifier], @"height": @([FeedCell cellHeight])},
                  @{@"cellIdentifier":[NewsHeaderCell cellIdentifier], @"height": @([NewsHeaderCell cellHeight])},
-//                 @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height": @([NewsFeedCell cellHeight])},
                  @{@"cellIdentifier":[RecordViewCell cellIdentifier], @"height": @([RecordViewCell cellHeight])}
                  ]];
 
@@ -119,9 +119,12 @@
     {
         [self captureVideo:nil];
     }
-    
-    
-    
+    else if (indexPath.row > 1)
+    {
+        NSDictionary *object = self.cellsData[indexPath.row];
+        SocialModel *model = object[@"object"];
+        [self showVideo:model.videoId];
+    }
     
 }
 
@@ -133,6 +136,15 @@
         ArticleViewController *articleViewController = segue.destinationViewController;
         [articleViewController setUrl:self.news.article.url];
     }
+}
+
+
+#pragma mark - Player
+- (void)showVideo:(NSString *)ytIdentifier
+{
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:ytIdentifier];
+    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+    [videoPlayerViewController.moviePlayer play];
 }
 
 

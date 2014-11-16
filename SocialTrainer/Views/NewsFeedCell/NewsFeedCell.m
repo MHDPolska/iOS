@@ -10,7 +10,6 @@
 #import "SocialModel.h"
 #import "SocialUserModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <XCDYouTubeVideoPlayerViewController.h>
 
 @implementation NewsFeedCell
 
@@ -40,10 +39,11 @@
                                   options:SDWebImageRefreshCached];
     self.avatar.layer.cornerRadius = 30.f;
     self.avatar.clipsToBounds = YES;
- 
-    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:model.videoId];
-    [videoPlayerViewController presentInView:self.ytView];
-    [videoPlayerViewController.moviePlayer play];
+    NSString *thumbnailURL = [NSString stringWithFormat:@"http://img.youtube.com/vi/%@/hqdefault.jpg", model.videoId];
+    
+    [self.ytView setImageWithURL:[NSURL URLWithString:thumbnailURL]
+                placeholderImage:[UIImage imageNamed:@"download.jpeg"]
+                         options:SDWebImageRefreshCached];
 }
 
 @end
