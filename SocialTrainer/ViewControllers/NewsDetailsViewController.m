@@ -121,10 +121,6 @@
     {
         [self performSegueWithIdentifier:@"showArticle" sender:nil];
     }
-    else if (indexPath.row == self.cellsData.count - 1)
-    {
-        [self captureVideo:nil];
-    }
     else if (indexPath.row > 1)
     {
         NSDictionary *object = self.cellsData[indexPath.row];
