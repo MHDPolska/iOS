@@ -71,7 +71,7 @@
 {
     NSDictionary *socialDict = @{@"cellIdentifier":[NewsFeedCell cellIdentifier], @"height":@([NewsFeedCell cellHeight]),
                                  @"object": model};
-    [cellsData insertObject:socialDict atIndex:cellsData.count-1];
+    [cellsData insertObject:socialDict atIndex:cellsData.count];
 }
 
 
